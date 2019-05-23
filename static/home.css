@@ -1,0 +1,24 @@
+.title_foto{
+    background-image: url('바다.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.time{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.info{
+    position: center;
+}

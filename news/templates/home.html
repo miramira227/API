@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+</head>
+<body>
+    <div class="title_foto">
+        <h1 class='title'>강원지역 대기오염 현황</h1>
+    </div>
+    {% for data in dataShown %} 
+    <div class='time'>
+        <h5>{{ data.dataTime }} 기준</h5>
+    </div>
+    <div class='info'>
+        <h2>{{ data.cityName }}의 대기오염기준</h2>
+        <p>아황산가스 농도: {{ data.so2Value }}</p>
+        <p>일산화탄소 농도: {{ data.coValue }}</p>
+        <p>오존 농도: {{ data.o3Value }}</p>
+        <p>이산화질소 농도: {{ data.no2Value }}</p>
+        <p>미세먼지(pm10) 농도: {{ data.pm10Value }}</p>
+        <p>미세먼지(pm25) 농도: {{ data.pm25Value }}</p>
+    </div>    
+    {% endfor %}    
+</body>
+</html> 
